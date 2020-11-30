@@ -1,0 +1,220 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	
+	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+	<script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+	
+	<script src="cordova.js"></script>	
+
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="a">
+			<h1>최영환 간단 포트폴리오</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="word.png" width="300" height="300">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">인적사항</a></li>
+				<li><a href="#movie" data-rel="dialog">소개</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">경력</a></li>
+				<li><a href="#gallery">학술정보</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>최영환</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="a">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>최영환을 소개합니다.</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="pic00.png" width="150px" height="150px">
+				</div>			
+				<h3>인적사항</h3>
+				<ul>
+					<li>성    명 : 최영환</li>
+					<li>생년월일 : 1994. 09. 27</li>
+					<li>주    소 : 울산광역시 울주군</li>
+					<li>연 락 처 : 010-개인정보-보호ㄴ</li>
+					<li>특    기 : 바이크, 영화보기, 정보검색
+					<li>학    력
+					<table id="year-table" border="1">
+						<thead>
+							<tr>	<th>졸업년도</th> <th>출신학교</th></tr>
+						</thead>
+						<tbody>
+							<tr>	<td>2013. 08.</td><td> 고졸 검정고시 합격 </td></tr>
+							<tr>	<td>2014. 3.</td><td> 동의과학대학교 입학 </td></tr>
+						</tbody>
+					</table>
+					</li>
+				</ul>
+				<aside>
+					<h3>참조링크</h3>
+					<a href="https://www.acmicpc.net/">
+						<img class="portal" src="back.jpg" width="54" height="59" alt="백준이동"/>
+					</a>
+					<a href="https://www.codewars.com/">
+						<img class="portal" src="codewars.jpg" width="54" height="59" alt="코드워즈이동"/>
+					</a>
+					<a href="https://www.hackerrank.com/">
+						<img class="portal" src="HackerRank.jpg" width="54" height="59" alt="해커랭크이동"/>
+					</a>
+				</aside>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<h1>최영환을 소개합니다</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>자기소개</h1>
+		</div>
+		<div data-role="content" >
+			<h3>자기소개</h3>
+		<img id="stu-pic" src="stu.jpg" width="150px" height="150px"/>
+		<p>
+			" 혁신적인 개발자 "<br>
+			언제나 모든 일을 시작할 때 혁신적인 생각으로 일하려고 노력합니다. 다양한 일을 했던 경험을 바탕삼아 협력하고 일을 쉽게 처리하고 고정관념에서 벗어나 새롭게 생각하여 혁신적인 개발자가 되고 싶습니다.
+		</p>
+		<aside>
+			<h3>참조링크</h3>
+			<a href="https://www.acmicpc.net/">
+				<img class="portal" src="back.jpg" width="54" height="59" alt="백준이동"/>
+			</a>
+			<a href="https://www.codewars.com/">
+				<img class="portal" src="codewars.jpg" width="54" height="59" alt="코드워즈이동"/>
+			</a>
+			<a href="https://www.hackerrank.com/">
+				<img class="portal" src="HackerRank.jpg" width="54" height="59" alt="해커랭크이동"/>
+			</a>
+		</aside>
+
+		</div>
+		<div data-role="footer" data-theme="a">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>경력</h1>
+		</div>
+		<div data-role="content">
+			<h3>울산정보영재</h3>
+		<ul>
+			<li>수료</li>
+		</ul>
+		<div id="pic-container">
+			<!-- <img id="pic1" class="semi-pic" src="음아직".jpg"/> -->
+		</div>		
+		
+        
+        <video autoplay controls preload="metadata">
+			<source src="system.mp4" type="video/mp4"></source>
+		
+			브라우저에서 비디오 파일을 지원하지 않습니다. <br/>
+
+		</video>
+    
+		<h3>경력</h3>
+		<ul>
+			<li>이력서 첨부</li>
+
+		</ul>
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="gallery" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>학술정보</h1>
+		</div>
+		<div data-role="content" >
+			<h3>프로젝트</h3>
+		<h5>학사관리시스템</h5>
+		<ul>
+			<li>20194</li>
+			<li>학사 관리 시스템을 설계하여 MySQL로 데이터베이스를 구축했습니다.(실무데이터베이스)</li>
+		</ul>
+		<h5>핑퐁게임</h5>
+		<ul>
+			<li>2019</li>
+			<li>웹으로 할 수 있는 간단한 게임을 개발했습니다.(클라이언트사이드)</li>
+			<li>2019.11 ~2019.12.23</li>
+		</ul>
+		<h5>학습노트</h5>
+		<ul>
+			<li>2019</li>
+			<li>학습을 하며 쉽게 저장하고 읽을 수 있는 학습 노트를 개발했습니다.(자바프로그래밍)</li>
+		</ul>
+		<h5>온습도 웹, LED 웹 </h5>
+		<ul>
+			<li>2020</li>
+			<li>클라우드 IOT(Arduino)를 활용하여 파이어베이스와 연동하여 온습도를 확인 할 수 있는 웹과 LED 제어 웹을 개발했습니다.(클라우드컴퓨팅)</li>
+		</ul>
+		<h5>물품관리 앱</h5>
+		<ul>
+			<li>2020</li>
+			<li>스마트폰으로 쉽고 간편하게 물품을 관리할 수 있는 앱을 개발했습니다.(모바일앱개발)</li>
+		</ul>
+		<h5>강의평가 웹</h5>
+		<ul>
+			<li>2020</li>
+			<li> 웹으로 누구나 볼 수 있는 강의 평가를 할 수 있는 웹을 개발했습니다.(서버사이드) </li>
+		</ul>
+		<h5>제조업 관리 시스템 </h5>
+		<ul>
+			<li>2020</li>
+			<li>제조업 시스템을 설계 및 분석하였습니다.(시스템분석및설계)</li>
+		</ul>
+			
+	
+		<h3>수상</h3>
+		<ul>
+			<li>교내 부트캠프 입상</li>
+		</ul>
+		<aside>
+			<h3>참조링크</h3>
+			<a href="https://www.acmicpc.net/">
+				<img class="portal" src="back.jpg" width="54" height="59" alt="백준이동"/>
+			</a>
+			<a href="https://www.codewars.com/">
+				<img class="portal" src="codewars.jpg" width="54" height="59" alt="코드워즈이동"/>
+			</a>
+			<a href="https://www.hackerrank.com/">
+				<img class="portal" src="HackerRank.jpg" width="54" height="59" alt="해커랭크이동"/>
+			</a>
+		</aside>
+
+		</div>
+		<div data-role="footer" data-theme="a">
+		</div>
+	</div>
+</div>	
+</body>
+</html>
