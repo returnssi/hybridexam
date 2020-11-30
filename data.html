@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>학생 정보</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var url = "http://61.76.199.241/db.php";
+            $.getJSON(url, function(result) {
+                console.log(result);
+                $.each(result, function(i, field) {
+                    var std_no = field.std_no;
+                    var birth_date = field.birth_date;
+                    var first_name = field.first_name;
+                    var last_name = field.last_name;
+                    var dp = field.dp;
+                    $("#listview").append("<hr> <p> 학번: " + std_no +" 생년월일: "+ birth_date +" 이름: "+first_name +""+last_name+" 학과: "+dp+"</p><hr>");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+        <div class="header">
+            <h2>학생정보 목록</h2>
+        </div>
+    <form method="post">
+    <div class="input-group">
+    <ul class="list" id="listview">
+    </ul>
+    </div>
+    </form>
+</body>
+
+</html>
